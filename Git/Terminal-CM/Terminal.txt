@@ -1,0 +1,230 @@
+TERMINAL - COMPLETE GUIDE (FROM BEGINNER TO ADVANCED)
+
+========================================
+
+1. WHAT IS THE TERMINAL?
+========================================
+The terminal is a way to control the computer using text commands instead of a mouse.
+
+You can:
+
+* navigate between folders
+* create files
+* run programs
+* manage Git
+* automate work
+
+========================================
+2. IMPORTANT BASIC CONCEPTS
+========================================
+
+Directory (folder)
+= a place where files are stored
+
+Path
+= address to a file/folder
+
+Home (~)
+= your user folder
+
+Root (/)
+= the top level of the system
+
+========================================
+3. NAVIGATING IN THE TERMINAL
+========================================
+
+Show where you are:
+pwd
+
+List files:
+ls
+
+List all files (including hidden):
+ls -a
+
+Enter a folder:
+cd foldername
+
+Go up one level:
+cd ..
+
+Go to home:
+cd ~
+
+========================================
+4. CREATE AND DELETE
+========================================
+
+Create folder:
+mkdir new-folder
+
+Create file:
+touch file.py
+
+Delete file:
+rm file.py
+
+Delete folder:
+rm -r folder
+
+Force delete:
+rm -rf folder
+
+========================================
+5. COPY AND MOVE
+========================================
+
+Copy file:
+cp file.txt copy.txt
+
+Copy folder:
+cp -r folder new-folder
+
+Move/rename:
+mv old.txt new.txt
+
+========================================
+6. OPEN FILES
+========================================
+
+View content:
+cat file.txt
+
+Scroll:
+less file.txt
+
+Open in editor:
+nano file.txt
+
+========================================
+7. RUN PROGRAMS
+========================================
+
+Python:
+python3 file.py
+
+Give permissions:
+chmod +x file.sh
+
+Run script:
+./file.sh
+
+========================================
+8. SEARCH
+========================================
+
+Search file:
+find . -name "file.txt"
+
+Search text:
+grep "text" file.txt
+
+========================================
+9. SYSTEM INFO
+========================================
+
+Show processes:
+ps
+
+Live view:
+top
+
+Disk usage:
+du -h
+
+Disk space:
+df -h
+
+========================================
+10. SHORTCUTS (VERY IMPORTANT)
+========================================
+
+Tab = auto-complete
+
+Ctrl + C = cancel
+
+Ctrl + L = clear terminal
+
+Up arrow = previous command
+
+Ctrl + A = beginning of line
+
+Ctrl + E = end of line
+
+========================================
+11. REDIRECTION & PIPES (ADVANCED)
+========================================
+
+Save output:
+ls > list.txt
+
+Append:
+ls >> list.txt
+
+Pipe:
+ls | grep "py"
+
+========================================
+12. PERMISSIONS (IMPORTANT)
+========================================
+
+chmod 755 file
+
+r = read  
+w = write  
+x = execute  
+
+========================================
+13. COMMON ERRORS
+========================================
+
+❌ "No such file or directory"
+→ wrong path
+
+❌ "Permission denied"
+→ missing permissions
+
+❌ "command not found"
+→ program not installed
+
+========================================
+14. PROFESSIONAL USAGE
+========================================
+
+Developers use the terminal for:
+
+* Git
+* running backend
+* installing packages
+* deploying apps
+* automating scripts
+
+========================================
+15. MENTAL MODEL
+========================================
+
+Terminal = control
+
+You control everything with text
+
+Faster than GUI
+
+========================================
+16. DAILY WORKFLOW
+========================================
+
+1. cd into project
+2. ls to see files
+3. run program (python)
+4. git commands
+5. fix files
+
+========================================
+END
+========================================
+
+If you know this:
+→ you are comfortable in the terminal
+→ you work like a real developer
+→ you can automate things

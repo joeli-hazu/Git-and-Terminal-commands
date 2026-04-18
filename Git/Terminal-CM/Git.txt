@@ -1,0 +1,255 @@
+GIT - COMPLETE GUIDE (FROM BEGINNER TO ADVANCED)
+
+========================================
+
+1. WHAT IS GIT?
+========================================
+Git is a version control system used to:
+
+* Save code history
+* Collaborate in projects
+* Undo changes
+* Manage different versions of code
+
+Think of Git as a "save system with a time machine" for code.
+
+========================================
+2. BASIC CONCEPTS
+========================================
+
+WORKING DIRECTORY
+= Your regular folder where you write code
+
+STAGING AREA
+= Files that are ready to be saved (git add)
+
+REPOSITORY (repo)
+= The history where commits are stored
+
+REMOTE (GitHub)
+= Code that is stored online
+
+========================================
+3. START A PROJECT WITH GIT
+========================================
+
+Step 1: Go to folder
+cd your-folder
+
+Step 2: Initialize git
+git init
+
+→ Creates .git (the Git brain)
+
+Step 3: Connect to GitHub
+git remote add origin <url>
+
+Example:
+git remote add origin git@github.com:user/repo.git
+
+========================================
+4. BASIC WORKFLOW (WHAT YOU ALWAYS DO)
+========================================
+
+1. Check status
+   git status
+
+2. Add files
+   git add .
+
+3. Save version
+   git commit -m "message"
+
+4. Send to GitHub
+   git push
+
+========================================
+5. FIRST PUSH (IMPORTANT)
+========================================
+
+git branch -M main
+git push -u origin main
+
+-u means:
+→ link local branch with GitHub branch
+
+After this, you only need:
+git push
+
+git pull
+
+========================================
+6. FETCH CHANGES FROM GITHUB
+========================================
+
+git pull origin main
+
+Used when:
+
+* someone else changed the code
+* you work on multiple computers
+
+========================================
+7. BRANCHES (IMPORTANT FOR PROS)
+========================================
+
+Create new branch:
+git branch feature-login
+
+Switch to branch:
+git checkout feature-login
+
+or:
+git switch feature-login
+
+Create + switch directly:
+git checkout -b feature-login
+
+Why branches?
+
+* test new features without breaking main
+* work in parallel
+
+========================================
+8. MERGE (COMBINE CODE)
+========================================
+
+Go to main:
+git checkout main
+
+Merge branch:
+git merge feature-login
+
+========================================
+9. COMMON ERRORS AND SOLUTIONS
+========================================
+
+❌ "remote origin already exists"
+→ git remote remove origin
+
+❌ "src refspec main does not match"
+→ you have not committed yet
+
+solution:
+git add .
+git commit -m "first"
+
+❌ "nothing to commit"
+→ no changes made
+
+❌ "detached HEAD"
+→ you are not on a branch
+fix:
+git checkout main
+
+❌ "permission denied (publickey)"
+→ SSH key missing
+
+========================================
+10. SSH VS HTTPS
+========================================
+
+SSH (commonly used by developers):
+git@github.com:user/repo.git
+
+HTTPS:
+https://github.com/user/repo.git
+
+SSH requires a key but is smoother long-term
+
+========================================
+11. CHECK REMOTE
+========================================
+
+git remote -v
+
+========================================
+12. REMOVE / CHANGE REMOTE
+========================================
+
+Remove:
+git remote remove origin
+
+Add again:
+git remote add origin <url>
+
+========================================
+13. CLONE (GET PROJECT)
+========================================
+
+git clone <url>
+
+Creates a copy of a repo from GitHub
+
+========================================
+14. RESET / UNDO CHANGES
+========================================
+
+Undo file (not staged):
+git checkout -- file.py
+
+Undo staging:
+git reset
+
+Hard reset (danger):
+git reset --hard
+
+========================================
+15. LOG (HISTORY)
+========================================
+
+git log
+
+git log --oneline
+
+========================================
+16. PROFESSIONAL WORKFLOW (REAL DEVS)
+========================================
+
+1. git pull (get latest code)
+2. create branch
+3. work on feature
+4. commit often
+5. push branch
+6. create pull request (GitHub)
+7. code review
+8. merge to main
+
+========================================
+17. PURPOSE OF EACH COMMAND
+========================================
+
+git init → start repo
+
+git add → select what to save
+
+git commit → save version
+
+git push → send to GitHub
+
+git pull → fetch changes
+
+git branch → create parallel development
+
+git merge → combine code
+
+git remote → connect GitHub
+
+========================================
+18. MENTAL MODEL (MOST IMPORTANT)
+========================================
+
+Git = time machine
+Commit = snapshot
+Branch = parallel world
+Push = upload
+Pull = download
+
+========================================
+END
+========================================
+
+If you truly understand this:
+→ you can work as a developer in a team
+→ build real projects
+→ contribute to open source
